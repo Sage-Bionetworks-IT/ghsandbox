@@ -2,12 +2,9 @@ name: check
 
 on:
   pull_request:
-    types: [opened]
     branches: [ '*' ]
   push:
     branches: [ '*' ]
-  issue_comment:
-    types: [created]
 
 jobs:
   check-echo:
