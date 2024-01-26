@@ -1,12 +1,12 @@
 name: comment
 
 on:
-  issue_comment:
-    types: [created]
+  pull_request_review:
+    types: [submitted]
 
 jobs:
   comment-echo:
-    if: ${{ (github.event.issue.pull_request == 'true') && (contains(github.event.comment.body, 'RTFT')) }}
+    if: ${{ (github.event.pull_request.base.ref == 'main') && (contains(github.event.comment.body, 'RTFT')) }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "comment job"
