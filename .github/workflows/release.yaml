@@ -7,8 +7,8 @@ on:
     types:
       - completed
 #    branches: ['main']
-#  push:
-#    branches: ['main']
+  push:
+    branches: ['main']
 
 jobs:
   release-echo:
