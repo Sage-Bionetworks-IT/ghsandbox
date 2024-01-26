@@ -10,4 +10,4 @@ jobs:
   check-echo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "check job"
+      - run: foo
