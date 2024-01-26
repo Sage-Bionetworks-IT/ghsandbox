@@ -11,15 +11,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "release job"
-  check-ct:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: khan/pull-request-comment-trigger@v1.1.0
-        id: check
-        with:
-          trigger: '@check'
-          reaction: rocket
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-      - run: echo "Run tests!"
-        if: steps.check.outputs.triggered == 'true'
