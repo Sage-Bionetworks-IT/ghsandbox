@@ -6,7 +6,7 @@ on:
       - check
     types:
       - completed
-#    branches: ['main']
+    branches: ['main']
   push:
     branches: ['main']
 
