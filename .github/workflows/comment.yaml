@@ -9,7 +9,7 @@ on:
 
 jobs:
   comment-echo:
-    if: ${{ contains(github.event.comment.body, 'RTFT') }}
+    if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, 'RTFT') }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "comment job"
