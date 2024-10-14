@@ -4,6 +4,6 @@ repos:
   #   hooks:
   #     - id: yamllint
   - repo: https://github.com/sirosen/check-jsonschema
-    rev: 0.18.2
+    rev: 0.29.4
     hooks:
       - id: check-github-workflows
